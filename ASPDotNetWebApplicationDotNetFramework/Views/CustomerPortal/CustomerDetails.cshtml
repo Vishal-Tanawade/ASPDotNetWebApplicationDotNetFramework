@@ -1,0 +1,37 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CustomerDetails</title>
+</head>
+<body>
+    <div style="background-color:teal;color:white; font-family:Arial; font-size:x-large">
+        <h1>Customer Data</h1> <br />
+        CustomerCode: @ViewData["CustomerCode"]<br />
+        CustomerName: @ViewData["CustomerName1"]<br />
+        @*or
+            CustomerName: @ViewBag.CustomerName<br />*@
+        Customer Type: @ViewData["CustomerType"]<br />
+        membership Date: @ViewBag.MembershipStartDate<br />
+        CustomerStatus:@(ViewBag.CustomerStatus ? "Active": "InActive")
+        CustomerStatus : @( Convert.ToBoolean(ViewData["CustomerStatus"]) ? "Active" : "InActive")
+        <br />
+
+
+
+        <select>
+            @foreach (string item in ViewBag.CartItem)
+            {
+                <option>@item</option>
+            }
+        </select>
+    </div>
+</body>
+</html>

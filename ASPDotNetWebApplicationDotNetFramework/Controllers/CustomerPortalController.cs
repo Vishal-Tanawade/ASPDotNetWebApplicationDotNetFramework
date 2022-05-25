@@ -24,5 +24,16 @@ namespace ASPDotNetWebApplicationDotNetFramework.Controllers
             return View();
         }
 
+        public ActionResult CustomerDetails()
+        {
+            ViewData["CustomerCode"] = 1001;
+            ViewData["CustomerName"] = "Vishal Tanawade"; // it is like dictionary's key-value pair
+            ViewData["CustomerType"] = "Gold Member";               
+            ViewBag.MembershipStartDate = DateTime.Now.ToShortDateString(); 
+            ViewBag.CustomerStatus = false; // it is like class  property   
+            ViewBag.CartItem = new string[] { "Laptop", "Mouse", "Speaker", "Pendrive" };
+
+            return View();
+        }
     }
 }

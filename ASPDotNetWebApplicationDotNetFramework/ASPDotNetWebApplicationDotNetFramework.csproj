@@ -166,6 +166,7 @@
     <Content Include="Views\CustomerPortal\Index.cshtml" />
     <Content Include="Views\CustomerPortal\AboutUs.cshtml" />
     <Content Include="Views\CustomerPortal\RazorDemo.cshtml" />
+    <Content Include="Views\CustomerPortal\CustomerDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
