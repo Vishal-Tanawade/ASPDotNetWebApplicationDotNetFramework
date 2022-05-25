@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Razor Demo</title>
+</head>
+<body>
+    <div>
+        @{
+            int tot = 0;
+
+        }
+
+        <table border="1">
+            <tr>
+                <th> Expression</th>
+
+                <th>Result</th>
+            </tr>
+            <!--@@bishek to declare var with @@ as start -->
+            @for (int i = 1; i <= 10; i++)
+            {@(tot= tot + i*2);
+                <tr><td>2 X @i </td>    <td>@(2*i) </td>  <td> <input type="checkbox" id="@("chk"+i)" name="selectchk" /> </td>        </tr>
+            }
+            <tr><td>Total= </td>    <td colspan="2">@tot </td>       </tr>
+        </table>
+    </div>
+</body>
+</html>

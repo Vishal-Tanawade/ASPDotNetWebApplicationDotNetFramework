@@ -19,6 +19,10 @@ namespace ASPDotNetWebApplicationDotNetFramework.Controllers
             return View();
         }
 
-       
+        public ActionResult RazorDemo()
+        {
+            return View();
+        }
+
     }
 }
